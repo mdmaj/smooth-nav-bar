@@ -9,10 +9,10 @@ const footerLinks = [
 ];
 
 const socials = [
-  { icon: Linkedin, href: "https://linkedin.com/in/mazid", label: "LinkedIn" },
-  { icon: Instagram, href: "https://instagram.com/mazid", label: "Instagram" },
-  { icon: Twitter, href: "https://twitter.com/mazid", label: "Twitter" },
-  { icon: Mail, href: "mailto:mazid@example.com", label: "Email" },
+  { icon: Linkedin, href: "https://linkedin.com/in/md-mazid-hussain-maj1707", label: "LinkedIn" },
+  { icon: Instagram, href: "https://www.instagram.com/flying__heart_17/", label: "Instagram" },
+  { icon: Twitter, href: "https://x.com/MdMazid1707", label: "Twitter" },
+  { icon: Mail, href: "mailto:mdmazidkqr@gmail.com", label: "Email" },
 ];
 
 export default function Footer() {

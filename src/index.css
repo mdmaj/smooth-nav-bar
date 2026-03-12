@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -54,16 +56,189 @@ All colors MUST be HSL.
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
-
-
 
 @layer base {
   * {
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary) / 0.35);
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary) / 0.65);
+  }
+}
+
+@layer utilities {
+  .dot-grid-bg {
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  .stagger-0 {
+    transition-delay: 0ms;
+  }
+
+  .stagger-80 {
+    transition-delay: 80ms;
+  }
+
+  .stagger-100 {
+    transition-delay: 100ms;
+  }
+
+  .stagger-160 {
+    transition-delay: 160ms;
+  }
+
+  .stagger-200 {
+    transition-delay: 200ms;
+  }
+
+  .stagger-240 {
+    transition-delay: 240ms;
+  }
+
+  .stagger-300 {
+    transition-delay: 300ms;
+  }
+
+  .stagger-350 {
+    transition-delay: 350ms;
+  }
+
+  .stagger-400 {
+    transition-delay: 400ms;
+  }
+
+  .stagger-450 {
+    transition-delay: 450ms;
+  }
+
+  .stagger-485 {
+    transition-delay: 485ms;
+  }
+
+  .stagger-500 {
+    transition-delay: 500ms;
+  }
+
+  .stagger-520 {
+    transition-delay: 520ms;
+  }
+
+  .stagger-550 {
+    transition-delay: 550ms;
+  }
+
+  .stagger-555 {
+    transition-delay: 555ms;
+  }
+
+  .stagger-585 {
+    transition-delay: 585ms;
+  }
+
+  .stagger-590 {
+    transition-delay: 590ms;
+  }
+
+  .stagger-620 {
+    transition-delay: 620ms;
+  }
+
+  .stagger-625 {
+    transition-delay: 625ms;
+  }
+
+  .stagger-650 {
+    transition-delay: 650ms;
+  }
+
+  .stagger-655 {
+    transition-delay: 655ms;
+  }
+
+  .stagger-660 {
+    transition-delay: 660ms;
+  }
+
+  .stagger-685 {
+    transition-delay: 685ms;
+  }
+
+  .stagger-690 {
+    transition-delay: 690ms;
+  }
+
+  .stagger-695 {
+    transition-delay: 695ms;
+  }
+
+  .stagger-720 {
+    transition-delay: 720ms;
+  }
+
+  .stagger-725 {
+    transition-delay: 725ms;
+  }
+
+  .stagger-750 {
+    transition-delay: 750ms;
+  }
+
+  .stagger-755 {
+    transition-delay: 755ms;
+  }
+
+  .stagger-785 {
+    transition-delay: 785ms;
+  }
+
+  .stagger-790 {
+    transition-delay: 790ms;
+  }
+
+  .stagger-820 {
+    transition-delay: 820ms;
+  }
+
+  .stagger-855 {
+    transition-delay: 855ms;
+  }
+
+  .stagger-890 {
+    transition-delay: 890ms;
+  }
+
+  .stagger-925 {
+    transition-delay: 925ms;
+  }
+
+  .stagger-960 {
+    transition-delay: 960ms;
+  }
+
+  .stagger-995 {
+    transition-delay: 995ms;
   }
 }
