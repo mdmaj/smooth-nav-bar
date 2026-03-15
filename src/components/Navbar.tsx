@@ -62,7 +62,8 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Desktop Resume button */}
+        {/* Desktop Resume buttons */}  
+        {/* Desktop Resume buttons */}  
         <Button
           variant="glass"
           className="hidden md:inline-flex"
