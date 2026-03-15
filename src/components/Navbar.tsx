@@ -44,6 +44,7 @@ export default function Navbar() {
     >
       <div className="container mx-auto flex items-center justify-between px-6">
         {/* Logo */}
+         {/* Logo */}
         <a href="#" className="text-2xl font-bold text-foreground tracking-tight">
           Mazid<span className="text-primary">.</span>
         </a>
