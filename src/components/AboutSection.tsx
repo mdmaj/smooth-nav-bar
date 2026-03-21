@@ -62,7 +62,7 @@ export default function AboutSection() {
             </div>
           </div>
 
-          {/* Highlight cards */}
+          {/* Highlight cards and icons */}
           <div className="grid grid-cols-2 gap-4">
             {highlights.map((h, i) => (
               <div
