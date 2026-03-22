@@ -64,12 +64,12 @@ export default function ProjectsSection() {
           <div className="h-1 w-12 bg-primary rounded mb-10" />
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {projects.map((project, i) => (
             <div
               key={project.title}
               className={cn(
-                "group relative rounded-xl border border-border bg-card p-6 transition-all duration-500 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-1.5 flex flex-col",
+                "group relative rounded-xl border border-border bg-card p-4 sm:p-6 transition-all duration-500 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-1.5 flex flex-col",
                 projectDelayClasses[i],
                 inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               )}

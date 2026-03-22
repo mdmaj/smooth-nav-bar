@@ -1,4 +1,10 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from "emailjs-com";
+// Replace these with your actual EmailJS values
+const EMAILJS_SERVICE_ID = "service_kpijeqz"; //service_hv48i29
+const EMAILJS_TEMPLATE_ID = "template_do3s97h"; // user auto-reply
+const EMAILJS_NOTIFICATION_TEMPLATE_ID = "template_seme1h5"; // Owner notification template
+const EMAILJS_USER_ID = "Pmg9R41_GFty7kbVj"; // 
 import { Send, MapPin, Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -18,18 +24,63 @@ export default function ContactSection() {
   const { toast } = useToast();
   const [loading, setLoading] = useState(false);
   const { ref, inView } = useInView();
+  const formRef = useRef<HTMLFormElement>(null);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
-      toast({
-        title: "Message sent!",
-        description: "Thanks for reaching out. I'll get back to you soon.",
-      });
-      setLoading(false);
-      (e.target as HTMLFormElement).reset();
-    }, 1000);
+    if (!formRef.current) return;
+
+    // Send auto-reply to user
+    emailjs.sendForm(
+      EMAILJS_SERVICE_ID,
+      EMAILJS_TEMPLATE_ID,
+      formRef.current,
+      EMAILJS_USER_ID
+    )
+      .then(
+        () => {
+          // Send notification to site owner
+          const form = formRef.current;
+          emailjs.send(
+            EMAILJS_SERVICE_ID,
+            EMAILJS_NOTIFICATION_TEMPLATE_ID,
+            {
+              from_name: form.user_name.value,
+              from_email: form.email.value,
+              subject: form.subject.value,
+              message: form.message.value,
+              // No need for to_email if your template hardcodes your email
+            },
+            EMAILJS_USER_ID
+          ).then(
+            () => {
+              // Optionally, you can show a toast or log success
+            },
+            (error) => {
+              toast({
+                title: "Failed to notify owner.",
+                description: error.text || "Owner notification failed.",
+                variant: "destructive",
+              });
+            }
+          );
+          toast({
+            title: "Message sent!",
+            description: "Thanks for reaching out. I'll get back to you soon.",
+          });
+          setLoading(false);
+          formRef.current?.reset();
+        },
+        (error) => {
+          toast({
+            title: "Failed to send message.",
+            description: error.text || "Please try again later.",
+            variant: "destructive",
+          });
+          setLoading(false);
+        }
+      );
   };
 
   return (
@@ -77,6 +128,7 @@ export default function ContactSection() {
 
           {/* Form */}
           <form
+            ref={formRef}
             onSubmit={handleSubmit}
             className={cn(
               "space-y-5 transition-all duration-700 delay-200",
@@ -90,6 +142,7 @@ export default function ContactSection() {
                 </Label>
                 <Input
                   id="name"
+                  name="user_name"
                   placeholder="Your name"
                   required
                   className="bg-card border-border focus:border-primary transition-colors"
@@ -101,6 +154,7 @@ export default function ContactSection() {
                 </Label>
                 <Input
                   id="email"
+                  name="email"
                   type="email"
                   placeholder="your@email.com"
                   required
@@ -114,6 +168,7 @@ export default function ContactSection() {
               </Label>
               <Input
                 id="subject"
+                name="subject"
                 placeholder="What's this about?"
                 required
                 className="bg-card border-border focus:border-primary transition-colors"
@@ -125,6 +180,7 @@ export default function ContactSection() {
               </Label>
               <Textarea
                 id="message"
+                name="message"
                 placeholder="Tell me about your project..."
                 rows={5}
                 required

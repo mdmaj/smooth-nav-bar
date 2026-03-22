@@ -35,7 +35,7 @@ export default function ExperienceSection() {
   const { ref, inView } = useInView();
 
   return (
-    <section id="experience" className="py-24 md:py-32 px-6 bg-card">
+    <section id="experience" className="py-16 md:py-32 px-2 sm:px-6 bg-card">
       <div ref={ref} className="container mx-auto max-w-5xl">
         {/* Header */}
         <div
@@ -52,22 +52,22 @@ export default function ExperienceSection() {
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-4 md:left-[22px] top-0 bottom-0 w-px bg-gradient-to-b from-primary/60 via-border to-transparent" />
+          <div className="absolute left-2 sm:left-4 md:left-[22px] top-0 bottom-0 w-px bg-gradient-to-b from-primary/60 via-border to-transparent" />
 
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             {experiences.map((exp, i) => (
               <div
                 key={i}
                 className={cn(
-                  "relative pl-12 md:pl-16 transition-all duration-600",
+                  "relative pl-8 sm:pl-12 md:pl-16 transition-all duration-600",
                   experienceDelayClasses[i],
                   inView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-6"
                 )}
               >
                 {/* Timeline dot */}
-                <div className="absolute left-[13px] md:left-[17px] top-6 w-3 h-3 rounded-full bg-primary ring-4 ring-card" />
+                <div className="absolute left-[5px] sm:left-[13px] md:left-[17px] top-6 w-3 h-3 rounded-full bg-primary ring-4 ring-card" />
 
-                <div className="rounded-xl border border-border bg-background p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5">
+                <div className="rounded-xl border border-border bg-background p-4 sm:p-6 w-full transition-all duration-300 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5">
                   <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
                     <div>
                       <h3 className="font-display font-bold text-foreground text-base flex items-center gap-2">

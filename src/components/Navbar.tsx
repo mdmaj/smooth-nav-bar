@@ -68,7 +68,7 @@ export default function Navbar() {
         <Button
           variant="glass"
           className="hidden md:inline-flex"
-          onClick={() => window.open("/resume.pdf", "_blank")}
+          onClick={() => window.open("/FullStack.pdf", "_blank")}
         >
           Resume
         </Button>
@@ -105,7 +105,7 @@ export default function Navbar() {
             variant="glass"
             className="w-full mt-2"
             onClick={() => {
-              window.open("/resume.pdf", "_blank");
+              window.open("/FullStack.pdf", "_blank");
               setOpen(false);
             }}
           >

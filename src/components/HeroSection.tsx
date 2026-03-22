@@ -165,7 +165,7 @@ export default function HeroSection() {
               <span
                 className="hidden sm:block absolute top-1/4 -right-14 px-3 py-1.5 rounded-full bg-card border border-border text-xs font-semibold font-display shadow-lg animate-float [animation-delay:0.8s] whitespace-nowrap"
               >
-                🟢 Node.js
+                📊 MongoDB
               </span>
               <span
                 className="hidden sm:block absolute bottom-1/3 -left-16 px-3 py-1.5 rounded-full bg-card border border-border text-xs font-semibold font-display shadow-lg animate-float [animation-delay:1.4s] whitespace-nowrap"
@@ -175,13 +175,9 @@ export default function HeroSection() {
               <span
                 className="absolute -bottom-3 right-4 px-3 py-1.5 rounded-full bg-card border border-border text-xs font-semibold font-display shadow-lg animate-float [animation-delay:0.5s] whitespace-nowrap"
               >
-                📊 MongoDB
+                🟢 Node.js
               </span>
-              <span
-                className="absolute -bottom-3 right-4 px-3 py-1.5 rounded-full bg-card border border-border text-xs font-semibold font-display shadow-lg animate-float [animation-delay:0.5s] whitespace-nowrap"
-              >
-                🎨 Tailwind
-              </span>
+              
 
             </div>
           </div>
