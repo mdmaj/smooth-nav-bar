@@ -1,10 +1,11 @@
 import { useState, useRef } from "react";
 import emailjs from "emailjs-com";
 // Replace these with your actual EmailJS values
-const EMAILJS_SERVICE_ID = "service_kpijeqz"; //service_hv48i29
-const EMAILJS_TEMPLATE_ID = "template_do3s97h"; // user auto-reply
-const EMAILJS_NOTIFICATION_TEMPLATE_ID = "template_seme1h5"; // Owner notification template
-const EMAILJS_USER_ID = "Pmg9R41_GFty7kbVj"; // 
+// Use environment variables for EmailJS values
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const EMAILJS_NOTIFICATION_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_NOTIFICATION_TEMPLATE_ID;
+const EMAILJS_USER_ID = import.meta.env.VITE_EMAILJS_USER_ID;
 import { Send, MapPin, Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
