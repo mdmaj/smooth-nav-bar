@@ -13,7 +13,7 @@ const projects = [
       "A full-stack e-commerce application with user authentication, product management, shopping cart, and payment integration.",
     tech: ["React", "Node.js", "MongoDB", "Stripe"],
     live: "#",
-    github: "#",
+    github: "https://github.com/mdmaj/Grocery-App",
     featured: true,
   },
   {
