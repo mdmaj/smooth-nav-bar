@@ -25,7 +25,7 @@ const projects = [
     github: "#",
     featured: false,
   },
-  // Add more projects as needed
+  // Add more projects as needed ................................
   {
     title: "Portfolio Website",
     description:
