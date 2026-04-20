@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import { useInView } from "@/hooks/use-in-view";
 
 const highlights = [
-  { icon: Code2, title: "Frontend", desc: "React, TypeScript, Tailwind CSS" },
+  { icon: Code2, title: "Frontend", desc: "React, TypeScript,Next js, Tailwind CSS" },
   { icon: Server, title: "Backend", desc: "Node.js, Express, REST APIs" },
   { icon: Database, title: "Databases", desc: "PostgreSQL, MongoDB, MySQL" },
   { icon: Layers, title: "DevOps", desc: "Git, Docker, CI/CD Pipelines" },
@@ -57,7 +57,7 @@ export default function AboutSection() {
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Calendar size={15} className="text-primary" />
-                4+ years experience
+                1+ years experience
               </div>
             </div>
           </div>

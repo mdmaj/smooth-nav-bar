@@ -3,19 +3,32 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useInView } from "@/hooks/use-in-view";
+import { Link } from "react-router-dom";
+import { title } from "process";
 
 const projectDelayClasses = ["stagger-100", "stagger-200", "stagger-300", "stagger-400"];
 
 const projects = [
   {
-    title: "E-Commerce Platform",
+    title: "Quick Mart, E-Commerce Platform",
     description:
-      "A full-stack e-commerce application with user authentication, product management, shopping cart, and payment integration.",
-    tech: ["React", "Node.js", "MongoDB", "Stripe"],
-    live: "#",
+      "A full-stack e-commerce application with user authentication, product management, shopping cart.",
+    tech: ["React", "Node.js", "MongoDB"],
+    live: "https://grocery-app-git-main-md-mazid-hussains-projects.vercel.app/",
     github: "https://github.com/mdmaj/Grocery-App",
     featured: true,
   },
+  {
+    title: "Chatify",
+    description:
+      "A real-time chat application with user authentication, chat rooms, and live messaging using Socket.io. Messages and user data are persisted with MongoDB and powered by a Node.js/Express backend.",
+    tech: ["React", "Node.js", "Express", "MongoDB", "Socket.io"],
+    live: "https://chatify-mazid.vercel.app/",
+    github: "https://github.com/mdmaj/Chatify",
+    featured: true,
+
+  },
+
   {
     title: "Task Management App",
     description:
@@ -46,8 +59,13 @@ const projects = [
   },
 ];
 
-export default function ProjectsSection() {
+interface ProjectsSectionProps {
+  limit?: number;
+}
+
+export default function ProjectsSection({ limit }: ProjectsSectionProps) {
   const { ref, inView } = useInView();
+  const displayProjects = typeof limit === "number" ? projects.slice(0, limit) : projects;
 
   return (
     <section id="projects" className="py-24 md:py-32 px-6">
@@ -66,7 +84,7 @@ export default function ProjectsSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {projects.map((project, i) => (
+          {displayProjects.map((project, i) => (
             <div
               key={project.title}
               className={cn(
@@ -134,6 +152,13 @@ export default function ProjectsSection() {
             </div>
           ))}
         </div>
+        {typeof limit === "number" && projects.length > limit && (
+          <div className="mt-8 flex justify-center">
+            <Button asChild variant="ghost" size="sm" className="text-xs px-4">
+              <Link to="/projects">More projects</Link>
+            </Button>
+          </div>
+        )}
       </div>
     </section>
   );

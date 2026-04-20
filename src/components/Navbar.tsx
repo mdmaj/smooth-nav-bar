@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -51,16 +52,27 @@ export default function Navbar() {
 
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="relative text-sm font-medium text-muted-foreground transition-colors duration-200 hover:text-primary group"
-            >
-              {link.name}
-              <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-primary transition-all duration-300 group-hover:w-full" />
-            </a>
-          ))}
+          {navLinks.map((link) =>
+            link.href.startsWith("#") ? (
+              <Link
+                key={link.name}
+                to={{ pathname: "/", hash: link.href }}
+                className="relative text-sm font-medium text-muted-foreground transition-colors duration-200 hover:text-primary group"
+              >
+                {link.name}
+                <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-primary transition-all duration-300 group-hover:w-full" />
+              </Link>
+            ) : (
+              <a
+                key={link.name}
+                href={link.href}
+                className="relative text-sm font-medium text-muted-foreground transition-colors duration-200 hover:text-primary group"
+              >
+                {link.name}
+                <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-primary transition-all duration-300 group-hover:w-full" />
+              </a>
+            )
+          )}
         </div>
 
         {/* Desktop Resume buttons */}  
@@ -91,16 +103,27 @@ export default function Navbar() {
         )}
       >
         <div className="px-6 pt-2 pb-4 bg-navbar-scrolled/95 backdrop-blur-md border-t border-border/30 space-y-1">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              onClick={() => setOpen(false)}
-              className="block py-2.5 text-sm font-medium text-muted-foreground hover:text-primary hover:bg-secondary/50 rounded px-3 transition"
-            >
-              {link.name}
-            </a>
-          ))}
+          {navLinks.map((link) =>
+            link.href.startsWith("#") ? (
+              <Link
+                key={link.name}
+                to={{ pathname: "/", hash: link.href }}
+                onClick={() => setOpen(false)}
+                className="block py-2.5 text-sm font-medium text-muted-foreground hover:text-primary hover:bg-secondary/50 rounded px-3 transition"
+              >
+                {link.name}
+              </Link>
+            ) : (
+              <a
+                key={link.name}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="block py-2.5 text-sm font-medium text-muted-foreground hover:text-primary hover:bg-secondary/50 rounded px-3 transition"
+              >
+                {link.name}
+              </a>
+            )
+          )}
           <Button
             variant="glass"
             className="w-full mt-2"

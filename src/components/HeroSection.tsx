@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { ArrowDown, Linkedin, Instagram, Twitter, Mail, Download, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const roles = ["Full Stack Developer", "React Specialist", "Node.js Engineer", "UI/UX Enthusiast"];
+const roles = ["Full Stack Developer","MERN Stack Developer","Backend Developer", "React Specialist", "Node.js Engineer"];
 
 const socials = [
   { icon: Linkedin, href: "https://linkedin.com/in/md-mazid-hussain-maj1707", label: "LinkedIn" },
@@ -102,10 +102,10 @@ export default function HeroSection() {
                 variant="outline"
                 size="lg"
                 className="rounded-full font-display border-border hover:border-primary hover:text-primary hover:bg-primary/10"
-                onClick={() => window.open("/resume.pdf", "_blank")}
+                onClick={() => window.open("/FullStack.pdf", "_blank")}
               >
                 <Download size={16} className="mr-2" />
-                Download CV
+                Download Resume
               </Button>
             </div>
 
@@ -130,20 +130,20 @@ export default function HeroSection() {
 
           {/* RIGHT — Profile image */}
           <div
-            className="order-1 lg:order-2 flex justify-center opacity-0 animate-fade-in-right [animation-delay:0.3s]"
+            className="order-1 lg:order-2 hidden lg:flex justify-center opacity-0 animate-fade-in-right [animation-delay:0.3s]"
           >
-            <div className="relative w-56 h-56 sm:w-72 sm:h-72 lg:w-80 lg:h-80">
-              {/* Outer rotating rings */}
-              <div className="absolute -inset-5 rounded-full border-2 border-dashed border-primary/25 animate-rotate-slow" />
+            <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
+              {/* Outer rotating rings (made subtler and larger) */}
+              <div className="absolute -inset-7 rounded-full border-2 border-dashed border-primary/20 animate-rotate-slow" />
               <div
-                className="absolute -inset-9 rounded-full border border-primary/10 animate-rotate-slow [animation-direction:reverse] [animation-duration:25s]"
+                className="absolute -inset-12 rounded-full border border-primary/8 animate-rotate-slow [animation-direction:reverse] [animation-duration:28s]"
               />
               {/* Glow */}
-              <div className="absolute inset-0 rounded-full bg-primary/15 blur-3xl scale-110 animate-pulse-glow" />
-              {/* Photo */}
-              <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-primary/40 bg-gradient-to-br from-primary/20 via-primary/5 to-transparent animate-float shadow-2xl">
+              <div className="absolute inset-0 rounded-full bg-primary/10 blur-2xl scale-105 animate-pulse-glow" />
+              {/* Photo (add subtle scale on hover and soft inner shadow) */}
+              <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-primary/30 bg-gradient-to-br from-primary/10 via-primary/3 to-transparent transform transition-transform duration-500 hover:scale-105 shadow-2xl">
                 <img
-                  src="/profile.jpg"
+                  src="/assets/hero8.jpeg"
                   alt="Mazid — Full Stack Developer"
                   className="w-full h-full object-cover"
                   onError={(e) => {
@@ -155,29 +155,30 @@ export default function HeroSection() {
                     }
                   }}
                 />
+                {/* soft inner vignette */}
+                <div className="absolute inset-0 rounded-full bg-gradient-to-b from-transparent to-black/10 pointer-events-none" />
               </div>
-              {/* Floating tech badges */}
+              {/* Floating tech badges (tweaked positions + smaller on small screens) */}
               <span
-                className="absolute -top-3 left-4 px-3 py-1.5 rounded-full bg-card border border-border text-xs font-semibold font-display shadow-lg animate-float whitespace-nowrap"
+                className="absolute -top-2 left-3 px-3 py-1 rounded-full bg-card border border-border text-xs font-semibold font-display shadow-lg animate-float whitespace-nowrap text-[11px]"
               >
                 ⚛️ React
               </span>
               <span
-                className="hidden sm:block absolute top-1/4 -right-14 px-3 py-1.5 rounded-full bg-card border border-border text-xs font-semibold font-display shadow-lg animate-float [animation-delay:0.8s] whitespace-nowrap"
+                className="hidden sm:block absolute top-20 -right-10 px-3 py-1 rounded-full bg-card border border-border text-xs font-semibold font-display shadow-lg animate-float [animation-delay:0.8s] whitespace-nowrap text-[11px]"
               >
                 📊 MongoDB
               </span>
               <span
-                className="hidden sm:block absolute bottom-1/3 -left-16 px-3 py-1.5 rounded-full bg-card border border-border text-xs font-semibold font-display shadow-lg animate-float [animation-delay:1.4s] whitespace-nowrap"
+                className="hidden sm:block absolute bottom-28 -left-12 px-3 py-1 rounded-full bg-card border border-border text-xs font-semibold font-display shadow-lg animate-float [animation-delay:1.4s] whitespace-nowrap text-[11px]"
               >
                 ⚙️ Express.js
               </span>
               <span
-                className="absolute -bottom-3 right-4 px-3 py-1.5 rounded-full bg-card border border-border text-xs font-semibold font-display shadow-lg animate-float [animation-delay:0.5s] whitespace-nowrap"
+                className="absolute -bottom-2 right-6 px-3 py-1 rounded-full bg-card border border-border text-xs font-semibold font-display shadow-lg animate-float [animation-delay:0.5s] whitespace-nowrap text-[11px]"
               >
                 🟢 Node.js
               </span>
-              
 
             </div>
           </div>

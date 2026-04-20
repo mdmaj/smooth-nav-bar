@@ -31,8 +31,8 @@ const skillDelayClassMap = {
 } as const;
 
 const stats = [
-  { value: "4+", label: "Years Experience" },
-  { value: "20+", label: "Projects Built" },
+  { value: "1+", label: "Years Experience" },
+  { value: "10+", label: "Projects Built" },
   { value: "15+", label: "Technologies" },
   { value: "5+", label: "Happy Clients" },
 ];
@@ -52,7 +52,7 @@ const skillCategories = [
   },
   {
     title: "Tools & DevOps",
-    skills: ["Git", "GitHub", "Docker", "VS Code", "Postman", "Figma", "Linux", "CI/CD"],
+    skills: ["Git", "GitHub", "VS Code", "Postman", "Linux", "CI/CD"],
   },
 ];
 

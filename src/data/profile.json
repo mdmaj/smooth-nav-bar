@@ -1,0 +1,20 @@
+{
+  "leetcode": "https://leetcode.com/mdmazid1707",
+  
+  "education": [
+    {
+      "degree": "B.Sc. in Computer Science",
+      "school": "ABC University",
+      "year": "2022",
+      "details": "Relevant coursework: Algorithms, Data Structures, Databases, Web Development"
+    }
+  ],
+  "achievements": [
+    "Top 10% in monthly hackathon (2023)",
+    "Open-source contributor: 3 repos"
+  ],
+  "certifications": [
+    { "title": "React - The Complete Guide", "org": "Udemy" },
+    { "title": "Node.js: Web Development", "org": "Coursera" }
+  ]
+}
