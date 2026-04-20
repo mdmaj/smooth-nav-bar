@@ -1,4 +1,4 @@
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, ArrowRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -13,7 +13,7 @@ const projects = [
     title: "Quick Mart, E-Commerce Platform",
     description:
       "A full-stack e-commerce application with user authentication, product management, shopping cart.",
-    tech: ["React", "Node.js", "MongoDB"],
+    tech: ["React", "Node.js", "MongoDB","Express"],
     live: "https://grocery-app-git-main-md-mazid-hussains-projects.vercel.app/",
     github: "https://github.com/mdmaj/Grocery-App",
     featured: true,
@@ -33,29 +33,59 @@ const projects = [
     title: "Task Management App",
     description:
       "A collaborative task management tool with real-time updates, drag-and-drop boards, and team workspaces.",
-    tech: ["Next.js", "TypeScript", "PostgreSQL", "Socket.io"],
-    live: "#",
-    github: "#",
-    featured: false,
+    tech: ["React.js"],
+    live: "https://empsystembymajid.netlify.app/",
+    github: "https://github.com/mdmaj/Employee-Management-System-By-Mazid",
+    featured: true,
   },
   // Add more projects as needed ................................
   {
     title: "Portfolio Website",
     description:
       "A modern, responsive developer portfolio showcasing projects, skills, and professional experience with a bold design.",
-    tech: ["React", "TypeScript", "Tailwind CSS", "Vite"],
-    live: "#",
-    github: "#",
+    tech: ["React",  "Tailwind CSS", "Vite"],
+    live: "",
+    github: "https://github.com/mdmaj/Tailwind-PortFolio",
     featured: false,
   },
   {
-    title: "Blog Platform",
+    title: "Todo List App",
     description:
-      "A content management system with rich text editing, categories, comments, and SEO optimization for authors.",
-    tech: ["React", "Express", "MySQL", "Redis"],
+      "A simple yet elegant todo list application with features like task categorization, due dates, and local storage persistence.",
+
+    tech: ["React.js"],
+    live: "https://majid-today-list.netlify.app/",
+    github: "https://github.com/mdmaj/ToDo-App",
+    featured: true,
+  },
+  ,
+  {
+    title: "Fintech Dashboard",
+    description:
+      "A comprehensive financial dashboard for tracking transactions, managing accounts, and generating reports. laravel is used for backend.",
+
+    tech: ["HTML", "CSS", "JavaScript"],
     live: "#",
-    github: "#",
+    github: "https://github.com/mdmaj/Dashboard",
     featured: false,
+  },
+  {
+    title: "Hotstar Clone",
+    description:
+      "A clone of the Hotstar streaming platform with user authentication, video playback, and a dynamic content library. ",
+    tech: ["HTML", "CSS", "JavaScript"],
+    live: "https://hot-star-clone-eta.vercel.app/",
+    github: "https://github.com/mdmaj/Hot_Star_Clone",
+    featured: true,
+  },
+  {
+    title: "Study Sync Clone",
+    description:
+      "A Clone of the Study Sync platform",
+    tech: ["HTML", "CSS", "JavaScript"],
+    live: "https://study-sync-weld.vercel.app/",
+    github: "https://github.com/mdmaj/StudySync",
+    featured: true,
   },
 ];
 
@@ -154,8 +184,18 @@ export default function ProjectsSection({ limit }: ProjectsSectionProps) {
         </div>
         {typeof limit === "number" && projects.length > limit && (
           <div className="mt-8 flex justify-center">
-            <Button asChild variant="ghost" size="sm" className="text-xs px-4">
-              <Link to="/projects">More projects</Link>
+            <Button
+              asChild
+              variant="ghost"
+              size="sm"
+              className="group relative overflow-hidden text-sm px-5 py-2 rounded-full bg-gradient-to-r from-orange-400/10 via-orange-400/6 to-transparent text-orange-400 border border-orange-400/20 hover:from-orange-400/20 hover:to-orange-400/10 shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+            >
+              <Link to="/projects" className="flex items-center gap-3">
+                <span className="font-medium">More projects</span>
+                <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-orange-400/10 group-hover:bg-orange-400 group-hover:text-white text-orange-400 transition-colors duration-300">
+                  <ArrowRight size={14} />
+                </span>
+              </Link>
             </Button>
           </div>
         )}

@@ -9,6 +9,7 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { Helmet } from "@/lib/react-helmet-async";
 
 const Index = () => {
   const location = useLocation();
@@ -25,6 +26,13 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background font-body">
+      <Helmet>
+        <title>Mazid — Full Stack Developer</title>
+        <meta name="description" content="Portfolio of Mazid — Full Stack Developer. Explore projects, skills, and contact information." />
+        <meta property="og:title" content="Mazid — Full Stack Developer" />
+        <meta property="og:description" content="Portfolio and projects by Mazid. View projects, skills, and contact info." />
+        <meta property="og:image" content="/og-image.png" />
+      </Helmet>
       <Navbar />
       <HeroSection />
       <AboutSection />

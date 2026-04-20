@@ -1,4 +1,4 @@
-# Welcome to your Lovable project
+# Welcome to your Mazid project
 
 ## Project info
 
@@ -8,11 +8,11 @@
 
 There are several ways of editing your application.
 
-**Use Lovable**
+**Use Mazid project console**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+Simply visit the [project console](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
 
-Changes made via Lovable will be committed automatically to this repo.
+Changes made via the project console will be committed automatically to this repo.
 
 **Use your preferred IDE**
 
@@ -62,9 +62,9 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+Simply open the project console and click on Share -> Publish.
 
-## Can I connect a custom domain to my Lovable project?
+## Can I connect a custom domain to my project?
 
 Yes, you can!
 

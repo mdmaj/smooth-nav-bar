@@ -7,28 +7,21 @@ const experienceDelayClasses = ["stagger-200", "stagger-350", "stagger-500"];
 const experiences = [
   {
     role: "Full Stack Developer",
-    company: "Tech Solutions Inc.",
-    period: "2023 — Present",
+    company: "Azzunique Software Pvt Ltd",
+    period: "Present",
     description:
-      "Building and maintaining scalable web applications using React, Node.js, and PostgreSQL. Leading frontend architecture decisions and mentoring junior developers.",
-    tech: ["React", "Node.js", "PostgreSQL", "Docker"],
+      "Building and maintaining scalable web applications using React, Node.js, and Express. Collaborating with cross-functional teams to design and implement new features, optimize performance, and ensure code quality. Leading the development of a key project that improved user engagement by 30%.",
+    tech: ["React", "Node.js", "Express","Prisma" ],
   },
   {
-    role: "Frontend Developer",
-    company: "Digital Agency",
-    period: "2022 — 2023",
+    role: "Training Intern",
+    company: "Learc & Build",
+    period: "June 2025 — Aug 2025",
     description:
-      "Developed responsive web interfaces for client projects. Collaborated with designers and backend teams to deliver pixel-perfect, performant applications.",
+      "Completed an intensive 3-month training program focused on full-stack web development. Gained hands-on experience with React, Node.js, and RESTful APIs through real-world projects and mentorship from industry professionals.",
     tech: ["React", "TypeScript", "Tailwind CSS", "REST APIs"],
   },
-  {
-    role: "Web Development Intern",
-    company: "StartUp Hub",
-    period: "2021 — 2022",
-    description:
-      "Contributed to building MVP features for early-stage products. Gained hands-on experience with full-stack development workflows and agile methodologies.",
-    tech: ["JavaScript", "Express", "MongoDB", "Git"],
-  },
+  
 ];
 
 export default function ExperienceSection() {

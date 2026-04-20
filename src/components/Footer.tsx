@@ -1,4 +1,5 @@
-import { Linkedin, Instagram, Twitter, Mail, Heart } from "lucide-react";
+import { Linkedin, Instagram, Twitter, Mail, Heart, ArrowUpRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const footerLinks = [
   { name: "About", href: "#about" },
@@ -38,20 +39,43 @@ export default function Footer() {
             ))}
           </nav>
 
-          {/* Social icons */}
-          <div className="flex gap-3">
-            {socials.map((s) => (
-              <a
-                key={s.label}
-                href={s.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={s.label}
-                className="p-2.5 rounded-full border border-border text-muted-foreground transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:border-primary"
+          {/* Social icons + actions */}
+          <div className="flex items-center gap-3">
+            <div className="flex gap-3">
+              {socials.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={s.label}
+                  className="p-2.5 rounded-full border border-border text-muted-foreground transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:border-primary"
+                >
+                  <s.icon size={16} />
+                </a>
+              ))}
+            </div>
+
+            <div className="hidden sm:flex items-center gap-2">
+              <Button
+                size="sm"
+                variant="ghost"
+                className="text-sm px-3 rounded-full border border-border hover:border-primary hover:text-primary"
+                onClick={() => window.open('/FullStack.pdf', '_blank')}
               >
-                <s.icon size={16} />
-              </a>
-            ))}
+                Resume
+                <ArrowUpRight size={14} className="ml-2" />
+              </Button>
+
+              <Button
+                size="sm"
+                variant="ghost"
+                className="text-sm px-3 rounded-full border border-border hover:border-primary hover:text-primary"
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              >
+                Back to top
+              </Button>
+            </div>
           </div>
         </div>
 

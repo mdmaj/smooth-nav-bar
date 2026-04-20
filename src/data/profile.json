@@ -1,20 +1,29 @@
 {
-  "leetcode": "https://leetcode.com/mdmazid1707",
+  "leetcode": "https://leetcode.com/u/Md_Mazid_Hussain/",
   
   "education": [
     {
-      "degree": "B.Sc. in Computer Science",
-      "school": "ABC University",
-      "year": "2022",
-      "details": "Relevant coursework: Algorithms, Data Structures, Databases, Web Development"
+      "degree": "B.Tech in Computer Science",
+      "school": "Rajasthan Technical University",
+      "year": "2023-2027",
+      "details": "CGPA: 8.8/10"
+    },
+    {
+      "degree": "Sr Secondary Education",
+      "school": "+2 Higher Secondary School, Barhi Hajaribagh",
+      "year": "2021-2023",
+      "details": "Percentage: 78.4%"
     }
   ],
   "achievements": [
-    "Top 10% in monthly hackathon (2023)",
-    "Open-source contributor: 3 repos"
+    "Secured top 10 rank in Hacker's Unity hackathon 2023",
+    "Completd GFG DSA Self Paced Course with 90% score",
+    "Full Stack head in our college's coding club and mentoring juniors"
   ],
   "certifications": [
-    { "title": "React - The Complete Guide", "org": "Udemy" },
-    { "title": "Node.js: Web Development", "org": "Coursera" }
+    { "title": "Completed Full-Stack Web Development Course","org": "GFG" },
+    { "title": "Completd GFG DSA Self Paced Course", "org": "GFG" },
+    { "title": "Completed Full-Stack Web Development Course", "org":"GRASS Solu.." },
+    { "title": "Completed Frontend Development Course", "org":"Learn & Build" }
   ]
 }

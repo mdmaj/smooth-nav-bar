@@ -25,7 +25,7 @@ export default function ExtrasSection() {
                 <Badge variant="secondary" className="text-xs">Profile</Badge>
               </div>
               <p className="text-sm text-muted-foreground mb-3">
-                Track your problem solving and algorithm progress. Link to your public profile below.
+                Track my problem solving and algorithm progress. Link to my public profile below.
               </p>
               <Button asChild size="sm" variant="ghost">
                 <a href={leetcode} target="_blank" rel="noopener noreferrer">
@@ -37,7 +37,7 @@ export default function ExtrasSection() {
               <h3 className="text-lg font-semibold mb-3">Education</h3>
               <div className="space-y-3 text-sm text-muted-foreground">
                 {education.map((e: any, idx: number) => (
-                  <div key={e.school} className={`opacity-0 animate-fade-in-left [animation-delay:${0.2 + idx * 0.04}s]`}>
+                  <div key={`${e.school}-${idx}`} className={`opacity-0 animate-fade-in-left [animation-delay:${0.2 + idx * 0.04}s]`}>
                     <div className="flex items-center justify-between">
                       <div>
                         <div className="font-medium text-foreground">{e.degree}</div>
@@ -57,7 +57,7 @@ export default function ExtrasSection() {
               <h3 className="text-lg font-semibold mb-3">Achievements</h3>
               <ul className="list-disc pl-5 text-sm text-muted-foreground space-y-2">
                 {achievements.map((a: string, idx: number) => (
-                  <li key={a} className={`opacity-0 animate-fade-in-left [animation-delay:${0.25 + idx * 0.03}s]`}>{a}</li>
+                  <li key={`${a}-${idx}`} className={`opacity-0 animate-fade-in-left [animation-delay:${0.25 + idx * 0.03}s]`}>{a}</li>
                 ))}
               </ul>
             </div>
@@ -66,7 +66,7 @@ export default function ExtrasSection() {
               <h3 className="text-lg font-semibold mb-3">Certifications & Courses</h3>
               <div className="flex flex-col gap-3">
                 {certifications.map((c: any, idx: number) => (
-                  <div key={c.title} className={`flex items-center justify-between opacity-0 animate-fade-in-left [animation-delay:${0.3 + idx * 0.03}s]`}>
+                  <div key={`${c.title}-${c.org}-${idx}`} className={`flex items-center justify-between opacity-0 animate-fade-in-left [animation-delay:${0.3 + idx * 0.03}s]`}>
                     <div className="text-sm text-foreground">{c.title}</div>
                     <div className="text-xs text-muted-foreground">{c.org}</div>
                   </div>
