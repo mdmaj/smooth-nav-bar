@@ -10,6 +10,7 @@ import Footer from "@/components/Footer";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Helmet } from "@/lib/react-helmet-async";
+import { T } from "vitest/dist/chunks/reporters.d.BFLkQcL6.js";
 
 const Index = () => {
   const location = useLocation();
@@ -28,10 +29,19 @@ const Index = () => {
     <div className="min-h-screen bg-background font-body">
       <Helmet>
         <title>Mazid — Full Stack Developer</title>
+        <title> Md Mazid Hussain</title>
+        <title> Md Mazid Hussain Portfolio</title>
+        <title> Md Mazid Hussain Full Stack Developer</title>
+        <title> Md Mazid Hussain Projects</title>
+        <title>Mazid Hussain</title>
+        <title> Md Mazid Web Developer</title>
+        <link rel="canonical" href="https://www.mdmaj.in/" />
         <meta name="description" content="Portfolio of Mazid — Full Stack Developer. Explore projects, skills, and contact information." />
+        <meta name="robots" content="index,follow" />
         <meta property="og:title" content="Mazid — Full Stack Developer" />
         <meta property="og:description" content="Portfolio and projects by Mazid. View projects, skills, and contact info." />
-        <meta property="og:image" content="/og-image.png" />
+        <meta property="og:url" content="https://www.mdmaj.in/" />
+        <meta property="og:image" content="https://www.mdmaj.in/og-image.png" />
       </Helmet>
       <Navbar />
       <HeroSection />
