@@ -15,7 +15,7 @@ const experiences = [
   },
   {
     role: "Training Intern",
-    company: "Learc & Build",
+    company: "Learn & Build",
     period: "June 2025 — Aug 2025",
     description:
       "Completed an intensive 3-month training program focused on full-stack web development. Gained hands-on experience with React, Node.js, and RESTful APIs through real-world projects and mentorship from industry professionals.",
